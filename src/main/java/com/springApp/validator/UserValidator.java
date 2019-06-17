@@ -3,13 +3,14 @@ package com.springApp.validator;
 import org.omg.CORBA.portable.ValueInputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
+import org.springframework.stereotype.Service;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 import com.springApp.model.UserCredentials;
 import com.springApp.service.UserService;
-
+@Service("userValidator")
 public class UserValidator implements Validator{
 	@Autowired
     private UserService userService;
